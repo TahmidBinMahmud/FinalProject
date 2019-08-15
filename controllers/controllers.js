@@ -33,3 +33,19 @@ module.exports.create = function(request, response) {
   })
   console.log(request.body);
 }
+
+module.exports.list = function(request, response) {
+  Data.find(function(err, data){
+    if(err){
+      response.status(400)
+        .json({
+          error: "Database query error"
+        });
+    }
+  
+    response.status(200).json({
+      datas: data
+    });
+  });
+  
+  }
