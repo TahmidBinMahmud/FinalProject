@@ -26,17 +26,9 @@ var loc = [
 ];
 
 $(document).ready(function () {
-  $("select.district").change(function () {
-    var selectedDistrict = $(this).children("option:selected").val();
-    //alert("You have selected the district - " + selectedDistrict);
-    console.log(selectedDistrict)
-    for (var i = 0; i < loc.length; i++) {
-      if (loc[i].name == selectedDistrict) {
-        $('#temp').text(loc[i].temperature);
-        $('#humid').text(loc[i].humidity);
-      }
-    }
-  });
+  $("select.district").customSelect(
+    console.log("hello")
+  );
 
 });
 

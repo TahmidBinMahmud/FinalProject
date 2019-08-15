@@ -49,3 +49,21 @@ module.exports.list = function(request, response) {
   });
   
   }
+
+  module.exports.single = function(request, response) {
+
+    Data.findOne({city:request.params.Halifax},
+      function(err, data){
+        if(err){
+          response.status(400)
+            .json({
+              error: "Database query error"
+            });
+        }else{
+        response.render('data.ejs', {
+          datas: data
+        })
+      }
+    });
+  
+  }
