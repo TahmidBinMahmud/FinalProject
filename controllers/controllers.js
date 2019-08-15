@@ -1,5 +1,5 @@
 
-
+var Data = require('./../models/data.js');
 module.exports.new = function(request, response) {
   response.render('index.ejs');
 }
@@ -13,4 +13,23 @@ module.exports.new2 = function(request, response) {
 
 module.exports.new3 = function(request, response) {
   response.render('input.ejs');
+}
+
+
+module.exports.create = function(request, response) {
+  var new_data = new Data(request.body);
+  new_data.save(function(err, data) {
+    if (err)
+      return response.status(400)
+        .json({
+          error: "Please add a City"
+        });
+    console.log(data);
+    return response.status(200)
+      .json({
+        message: "Data succesfully added"
+      });
+
+  })
+  console.log(request.body);
 }

@@ -39,3 +39,29 @@ $(document).ready(function(){
   });
 
 });
+
+$("#datainput").click(function(event){
+  var envdata={
+    city:$('#cityI').val(),
+    temperature: $('#tempI').val(),
+    humidity:$('#humidI').val(),
+    pm10: $('#pm10μmI').val(),
+    pm25: $('#pm2.5μmI').val(),
+    pm01: $('#pm1.0μmI').val(),
+    aqi: $('#aqiI').val(),
+    wqi: $('#wqiI').val(),
+    vocs: $('#vocsI').val(),
+    landType: $('#landTypeI').val()
+  }
+      $.ajax({
+          url:"/data/new",
+          method: "POST",
+          data:envdata
+
+      }).done(function(response){
+          console.log(response)
+      }).fail(function(response){
+          console.log(response)
+      })
+}
+)

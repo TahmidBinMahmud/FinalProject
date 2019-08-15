@@ -36,5 +36,5 @@ var dataSchema = new Schema({
   }
 });
 
-var app1 = mongoose.model('app', dataSchema)
+var app1 = mongoose.model('EnvData', dataSchema)
 module.exports = app1;
