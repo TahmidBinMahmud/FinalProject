@@ -3,10 +3,10 @@
 
 <head>
     <title>Enviro-Map</title>
-    <script type="text/javascript" src="vendor/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
         <a class="navbar-brand" href="index.html">
-            <img src="vendor\images\zthd1kdfxy131.png" alt="Logo" style="height:35px">
+            <img src="images\zthd1kdfxy131.png" alt="Logo" style="height:35px">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -53,9 +53,9 @@
         </div>
     </nav>
 
-    <div id="dataBox" class="container">
-        <div class="d-flex justify-content-center">Data Viewer</div>
-        <p><strong>Data Location</strong>
+    <div id="dataBoxI" class="container">
+        <div class="d-flex justify-content-center">Data Input</div>
+        <!-- <p><strong>Data Location</strong>
             <form>
                 <select class="district custom-select mb-3" style="width: 20%">
                     <option selected>Select Location</option>
@@ -69,22 +69,25 @@
                     <option value="mymensingh">Mymensingh</option>
                 </select>
             </form>
-        </p>
-        <pre id="allDatas">
-        Temperature: <span id="temp"></span>
-        Humidity: <span id="humid"></span>
-        PM 10μm: <span id="pm10μm"></span>
-        PM 2.5μm: <span id="pm2.5μm"></span>
-        PM 1.0μm: <span id="pm1.0μm"></span>
-        Air Quality Index: <span id="aqi"></span>
-        Water Quality Index: <span id="wqi"></span>
-        Volatile Organic Compounds (VOCs): <span id="vocs"></span>
-        Land Type: <span id="landType"></span>
+        </p> -->
+        <pre id="allDatasI">
+        Temperature: <input class="form-control" type="text" id="tempI" placeholder="Input Temperature">
+        Humidity: <input class="form-control" type="text" id="humidI" placeholder="Input Humidity">
+        PM 10μm: <input class="form-control" type="text" id="pm10μmI" placeholder="Input  PM 10μm">
+        PM 2.5μm: <input class="form-control" type="text" id="pm2.5μmI" placeholder="Input  PM 2.5μm">
+        PM 1.0μm: <input class="form-control" type="text" id="pm1.0μmI" placeholder="Input  PM 1.0μm">
+        Air Quality Index: <input class="form-control" type="text" id="aqiI" placeholder="Input  Air Quality Index">
+        Water Quality Index: <input class="form-control" type="text" id="wqiI" placeholder="Input  Water Quality Index">
+        Volatile Organic Compounds (VOCs): <input class="form-control" type="text" id="vocsI" placeholder="Input  Volatile Organic Compounds (VOCs)">
+        Land Type: <input class="form-control" type="text" id="landTypeI" placeholder="Input  Land Type">
+        <br>
+        <input class="btn btn-primary" type="button" id="input" value="Submit">
     </pre>
     </div>
 
-    <script type="text/javascript" src="vendor/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
+    
 </body>
 
 </html>

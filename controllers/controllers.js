@@ -10,3 +10,7 @@ module.exports.new1 = function(request, response) {
 module.exports.new2 = function(request, response) {
   response.render('data.ejs');
 }
+
+module.exports.new3 = function(request, response) {
+  response.render('input.ejs');
+}

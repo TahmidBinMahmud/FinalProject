@@ -7,6 +7,6 @@ module.exports = function(app) {
   app.get('/index.html', app1.new);
   app.get('/map.html', app1.new1);
   app.get('/data.html', app1.new2);
-
+  app.get('/input', app1.new3);
 
 }
