@@ -1,0 +1,71 @@
+#mapid {
+    position: absolute;
+    top: 100px;
+    bottom: 40px;
+    right: 40px;
+    left: 40px;
+  }
+
+#envdataImg{
+    height: 215px;
+    width: 400px;
+}
+
+#requestBrdImg{
+    height: 215px;
+    width: 400px;
+}
+
+#secondList{
+    position: relative;
+    float:left;
+}
+
+#allDatas{
+    float: left;
+    font-size: 120%;
+    line-height: 1.6;
+}
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .container-fluid {
+    padding: 60px 50px;
+  }
+
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+
+  #dataBox{
+      padding-top: 120px;
+  }

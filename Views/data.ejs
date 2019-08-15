@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Enviro-Map</title>
+    <script type="text/javascript" src="vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="vendor\images\zthd1kdfxy131.png" alt="Logo" style="height:35px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Map</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu p-3 dropdown-menu-right">
+                        <form class="form-horizontal" method="post" accept-charset="UTF-8">
+                            <input class="form-control login" type="text" name="username2" placeholder="Username">
+                            <input class="form-control login" type="text" name="password2" placeholder="Password">
+                            <input class="btn btn-primary" type="button" name="submit" value="Login">
+                        </form>
+                    </div>
+                </li>
+        </div>
+    </nav>
+
+    <div id="dataBox" class="container">
+        <div class="d-flex justify-content-center">Data Viewer</div>
+        <p><strong>Data Location</strong>
+            <form>
+                <select class="district custom-select mb-3" style="width: 20%">
+                    <option selected>Select Location</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="sylhet">Sylhet</option>
+                    <option value="barisal">Barisal</option>
+                    <option value="rajshahi">Rajshahi</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="rangpur">Rangpur</option>
+                    <option value="mymensingh">Mymensingh</option>
+                </select>
+            </form>
+        </p>
+        <pre id="allDatas">
+        Temperature: <span id="temp"></span>
+        Humidity: <span id="humid"></span>
+        PM 10μm: <span id="pm10μm"></span>
+        PM 2.5μm: <span id="pm2.5μm"></span>
+        PM 1.0μm: <span id="pm1.0μm"></span>
+        Air Quality Index: <span id="aqi"></span>
+        Water Quality Index: <span id="wqi"></span>
+        Volatile Organic Compounds (VOCs): <span id="vocs"></span>
+        Land Type: <span id="landType"></span>
+    </pre>
+    </div>
+
+    <script type="text/javascript" src="vendor/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
