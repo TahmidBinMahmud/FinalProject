@@ -26,9 +26,22 @@ var loc = [
 ];
 
 $(document).ready(function () {
-  $("select.district").customSelect(
-    console.log("hello")
-  );
+  $("select.district").change(function () {
+    console.log
+    var selectedDistrict = $(this).children("option:selected").val();
+    //alert("You have selected the district - " + selectedDistrict);
+    console.log(selectedDistrict)
+    $.ajax({
+      method: "GET",
+      url: "data/Halifax",
+      
+     
+    }).done(function (response) {
+      console.log(response);
+    }).fail(function (response) {
+      console.log(response.responseText);
+    });
+  });
 
 });
 
