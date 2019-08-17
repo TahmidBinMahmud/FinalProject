@@ -15,6 +15,9 @@ module.exports.new3 = function(request, response) {
   response.render('input.ejs');
 }
 
+module.exports.new4 = function(request, response) {
+  response.render('graphs.ejs');
+}
 
 module.exports.create = function(request, response) {
   var new_data = new Data(request.body);
