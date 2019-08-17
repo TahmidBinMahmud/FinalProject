@@ -82,8 +82,11 @@ $("#getdata").click(function (event) {
   
 })
 
-$("#getdata").click(function (event) {
-  
-  
+$("#admin").click(function (event) {
+  // console.log($('#userName').val());
+  if(String($('#userName').val()) == "admin" && String($('#passWord').val()) == "asdf"){
+    // console.log($('#userName').val());
+    $('#hide').removeClass("disabled");
+  }
 })
 
