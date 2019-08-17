@@ -15,9 +15,7 @@ module.exports.new3 = function(request, response) {
   response.render('input.ejs');
 }
 
-module.exports.new4 = function(request, response) {
-  response.render('graphs.ejs');
-}
+
 
 module.exports.create = function(request, response) {
   var new_data = new Data(request.body);
@@ -52,6 +50,21 @@ module.exports.list = function(request, response) {
   });
   
   }
+  module.exports.listdata = function(request, response) {
+    Data.find(function(err, data){
+      if(err){
+        response.status(400)
+          .json({
+            error: "Database query error"
+          });
+      }
+    
+      response.status(200).json({
+        datas: data
+      });
+    });
+    
+    }
 
   module.exports.single = function(request, response) {
 

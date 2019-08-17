@@ -8,9 +8,10 @@ module.exports = function(app) {
   app.get('/map', app1.new1);
   app.get('/data', app1.new2);
   app.get('/input', app1.new3);
-  app.get('/graphs', app1.new4);
+  
   app.post('/data/new',app1.create);
   app.get('/data/list', app1.list);
+
   app.get('/data/:dataCity', app1.single);
 
 }
