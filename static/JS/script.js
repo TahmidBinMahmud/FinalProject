@@ -26,18 +26,45 @@ var loc = [
 ];
 
 $(document).ready(function () {
+  
   $("select.district").change(function () {
-    console.log
+     
+    
     var selectedDistrict = $(this).children("option:selected").val();
     //alert("You have selected the district - " + selectedDistrict);
     console.log(selectedDistrict)
     $.ajax({
       method: "GET",
-      url: "data/"+selectedDistrict,
-      
+      url: "data/" + selectedDistrict,
      
+
     }).done(function (response) {
-      console.log(response);
+      console.log (response)
+     var aqi=response.datas.aqi
+      
+    var humidity= response.datas.humidity
+    var  landType=response.datas.landType
+     var pm10= response.datas.pm10
+     var temperature=response.datas.temperature
+     var vocs=response.datas.vocs
+    var  wqi=response.datas.wqi
+    var pm25=response.datas.pm25
+    var pm1=response.datas.pm01
+    // var pm25= response.datas.pm25
+    // var pm10=response.datas.pm10
+    $('#temp').text(humidity);
+      $('#humid').text(humidity);
+      $('#pm10μm').text(pm10);
+      $('#pm25μm').text(pm25);
+      $('#pm1μm').text(pm1);
+      $('#aqi').text(aqi);
+      $('#wqi').text(wqi);
+      $('#vocs').text(vocs);
+      $('#landType').text(landType);
+    
+
+
+
     }).fail(function (response) {
       console.log(response.responseText);
     });
@@ -51,8 +78,8 @@ $("#datainput").click(function (event) {
     temperature: $('#tempI').val(),
     humidity: $('#humidI').val(),
     pm10: $('#pm10μmI').val(),
-    pm25: $('#pm2.5μmI').val(),
-    pm01: $('#pm1.0μmI').val(),
+    pm25: $('#pm25μmI').val(),
+    pm01: $('#pm1μmI').val(),
     aqi: $('#aqiI').val(),
     wqi: $('#wqiI').val(),
     vocs: $('#vocsI').val(),
@@ -79,12 +106,12 @@ $("#getdata").click(function (event) {
   }).fail(function (response) {
     console.log(response.responseText);
   });
-  
+
 })
 
 $("#admin").click(function (event) {
   // console.log($('#userName').val());
-  if(String($('#userName').val()) == "admin" && String($('#passWord').val()) == "asdf"){
+  if (String($('#userName').val()) == "admin" && String($('#passWord').val()) == "asdf") {
     // console.log($('#userName').val());
     $('#hide').removeClass("disabled");
   }
