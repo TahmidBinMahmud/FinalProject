@@ -52,7 +52,7 @@ module.exports.list = function(request, response) {
 
   module.exports.single = function(request, response) {
 
-    Data.findOne({city:request.params.Halifax},
+    Data.findOne({city:request.params.dataCity},
       function(err, data){
         if(err){
           response.status(400)
@@ -60,7 +60,7 @@ module.exports.list = function(request, response) {
               error: "Database query error"
             });
         }else{
-        response.render('data.ejs', {
+        response.json( {
           datas: data
         })
       }

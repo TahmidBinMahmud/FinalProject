@@ -33,7 +33,7 @@ $(document).ready(function () {
     console.log(selectedDistrict)
     $.ajax({
       method: "GET",
-      url: "data/Halifax",
+      url: "data/"+selectedDistrict,
       
      
     }).done(function (response) {
