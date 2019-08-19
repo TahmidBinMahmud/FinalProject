@@ -34,12 +34,12 @@ Also pin on map the data we have on our database.
 
   2. Download this code, and from command prompt run:
 
-     'npm install'
+     `npm install`
 
   3. To run the code, run:
 
-     'nodemon server.js' or,
-     'node server.js'
+     `nodemon server.js` or,
+     `node server.js`
 
   4. In the browser open [http://localhost:3000/](http://localhost:3000/), and you should see the index page
   
