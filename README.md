@@ -42,3 +42,7 @@ Also pin on map the data we have on our database.
      'node server.js'
 
   4. In the browser open [http://localhost:3000/](http://localhost:3000/), and you should see the index page
+  
+  5. For Authorized Login, use:
+     admin: **admin**
+     password: **asdf**
