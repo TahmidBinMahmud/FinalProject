@@ -14,16 +14,16 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-var loc = [
-  { name: "dhaka", temperature: "37°C", humidity: "72%" },
-  { name: "chittagong", temperature: "33°C", humidity: "81%" },
-  { name: "sylhet", temperature: "34°C", humidity: "79%" },
-  { name: "barisal", temperature: "32°C", humidity: "75%" },
-  { name: "rajshahi", temperature: "28°C", humidity: "60%" },
-  { name: "khulna", temperature: "30°C", humidity: "77%" },
-  { name: "rangpur", temperature: "33°C", humidity: "80%" },
-  { name: "mymensingh", temperature: "32°C", humidity: "70%" },
-];
+// var loc = [
+//   { name: "dhaka", temperature: "37°C", humidity: "72%" },
+//   { name: "chittagong", temperature: "33°C", humidity: "81%" },
+//   { name: "sylhet", temperature: "34°C", humidity: "79%" },
+//   { name: "barisal", temperature: "32°C", humidity: "75%" },
+//   { name: "rajshahi", temperature: "28°C", humidity: "60%" },
+//   { name: "khulna", temperature: "30°C", humidity: "77%" },
+//   { name: "rangpur", temperature: "33°C", humidity: "80%" },
+//   { name: "mymensingh", temperature: "32°C", humidity: "70%" },
+// ];
 
 $(document).ready(function () {
   
@@ -42,17 +42,17 @@ $(document).ready(function () {
       console.log (response)
      var aqi=response.datas.aqi
       
-    var humidity= response.datas.humidity
-    var  landType=response.datas.landType
-     var pm10= response.datas.pm10
-     var temperature=response.datas.temperature
-     var vocs=response.datas.vocs
-    var  wqi=response.datas.wqi
-    var pm25=response.datas.pm25
-    var pm1=response.datas.pm01
-    // var pm25= response.datas.pm25
-    // var pm10=response.datas.pm10
-    $('#temp').text(humidity);
+      var humidity = response.datas.humidity
+      var landType = response.datas.landType
+      var pm10 = response.datas.pm10
+      var temperature = response.datas.temperature
+      var vocs = response.datas.vocs
+      var wqi = response.datas.wqi
+      var pm25 = response.datas.pm25
+      var pm1 = response.datas.pm01
+      // var pm25= response.datas.pm25
+      // var pm10=response.datas.pm10
+      $('#temp').text(temperature);
       $('#humid').text(humidity);
       $('#pm10μm').text(pm10);
       $('#pm25μm').text(pm25);
